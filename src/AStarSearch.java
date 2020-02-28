@@ -134,12 +134,15 @@ public class AStarSearch {
         Iterator value = pq.iterator();
         while (value.hasNext()){
             State state = (State) value.next();
-            System.out.println("------------------");
-            state.printBoard();
-            System.out.println("G cost = "+state.getG_cost());
-            System.out.println("H cost = "+state.getH_cost());
-            System.out.println("F cost = "+state.getF_cost());
-            System.out.println("------------------");
+            int[][] pqBoard = state.getCurrentBoardState();
+
+            for (int i = 0; i < pqBoard.length; i++) {
+                for (int j = 0; j < pqBoard.length ; j++) {
+                    if(currentBoard[i][j]!=qBoard[i][j]){
+                        return false;
+                    }
+                }
+            }
 
         }
          return true;
