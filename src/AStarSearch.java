@@ -27,25 +27,29 @@ public class AStarSearch {
          //the body of the main loop runs till the queue is empty
          while (!pq.isEmpty()){
              //retrieves and returns the head of the queue
+             /*System.out.println("Printing the states of PQ-------------------------------------------------");
              printPQStateInfo(pq);
+             System.out.println("----------------------------------------------------------------------------------");*/
              currentState = pq.poll();
              //System.out.println(visited.size());
-             System.out.println("The current popped state ");
-             currentState.printBoard();
+             //System.out.println("The current popped state ");
+             ///currentState.printBoard();
+             //System.out.println(currentState.getF_cost());
             //adding to the visited Q after popping from the PQ
              visited.add(currentState);
 
              //checking to see if the current state is the goal state or not
              if(currentState.checkEquality()){
                     result = true;
-                    printPath(visited);
+                    //printPath(visited);
+                 printPath(currentState);
                     break;
              }else{
                  //Generate all the possible child state from the current state of the board
                  ArrayList<State>expandedStates = currentState.childStates();
 
-                 /*System.out.println("List of all expanded states: ");
-                 for(State x:expandedStates){
+                // System.out.println("List of all expanded states: ");
+                 /*for(State x:expandedStates){
                      x.printBoard();
                  }*/
 
@@ -54,7 +58,7 @@ public class AStarSearch {
                      //if visited queue contains child State or not
                      //System.out.println("checking if visited Q has a state or not");
                      //System.out.println("---------");
-                     childState.printBoard();
+                     //childState.printBoard();
                      boolean isVisited = checkStateQ(childState.getCurrentBoardState(), visited);
                      boolean isInPQ = false;
                      if(pq.size()>0){
@@ -69,10 +73,10 @@ public class AStarSearch {
                          //System.out.println(isInPQ);
                          if(!isInPQ){
                              //calculating the costs here
-                             childState.setG_cost(childState.getG_cost()+1);
+                             childState.setG_cost(currentState.getG_cost()+1);
                              childState.setH_cost(h.callHeursitic(heauristic,childState));
                              childState.setF_cost(childState.getG_cost()+childState.getH_cost());
-
+                             childState.setParentState(currentState);
                              //after cost calculations, we add it to the PQ
                              //System.out.println("We are adding this state to the queue");
                              //System.out.println("----------");
@@ -117,6 +121,7 @@ public class AStarSearch {
                     }
                 }
             }
+            if(flag) return true;
         }
         return flag;
     }
@@ -154,8 +159,20 @@ public class AStarSearch {
                 }
             }
 
+            if(flag) return true;
+
         }
          return flag;
+    }
+
+    public void printPath(State state){
+         if(state.getParentState()!=null)
+            printPath(state.getParentState());
+
+         state.printBoard();
+        System.out.println();
+        System.out.println();
+        System.out.println();
     }
 
 

@@ -4,6 +4,11 @@ public class State {
 
     private int[][] currentBoardState;
     private int[][] goalBoardState;
+
+    public State getParentState() {
+        return parentState;
+    }
+
     private State parentState;
     private int g_cost;
     private int h_cost;

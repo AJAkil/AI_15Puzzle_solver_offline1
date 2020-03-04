@@ -51,7 +51,7 @@ public class Client {
         //initialState.childStates();
 
         AStarSearch astar = new AStarSearch();
-        astar.AstarSearch(initialState, "displacement");
+        astar.AstarSearch(initialState, "manhattan");
 
 
 
