@@ -184,7 +184,49 @@ public class AStarSearch {
     }
 
 
-    
+    public boolean checkIsSolvable(int[][] board, int[]flatArray){
+        boolean isSolvable = false;
+        int n = board.length;
+        int blankPos = -1;
+        int inversionCount = 0;
+        System.out.println("row-col = " + n);
+        //find blank tile position from the bottom of the game board
+        for (int i = n - 1; i >=0 ; i--) {
+            for (int j = n - 1; j >=0 ; j--) {
+                if(board[i][j] == 0){
+                    blankPos = n - i;
+                }
+            }
+        }
+
+        System.out.println("position of blank = "+blankPos);
+
+        //counting inversion of the given board state wrt an ideal state
+        for (int i = 0; i < n*n-1 ; i++) {
+            for (int j = i+1; j < n*n ; j++) {
+                if(flatArray[i] > flatArray[j] && flatArray[i]!=0 && flatArray[j]!=0){
+                    inversionCount++;
+                }
+            }
+        }
+
+        System.out.println("The number of inversion is = "+inversionCount);
+
+
+        //checking the inversion count
+        if(n % 2 == 0){
+            if(blankPos % 2 == 0 && inversionCount % 2!=0){
+                isSolvable = true;
+            }else if(blankPos % 2 != 0 && inversionCount % 2==0){
+                isSolvable = true;
+            }else{
+                isSolvable = false;
+            }
+        }
+
+        return isSolvable;
+
+    }
 
 
 }

@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8937f89-2cd6-4a9f-b30e-bd0371b7ae85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OFFLINE 1/AStarSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OFFLINE 1/AStarSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OFFLINE 1/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OFFLINE 1/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OFFLINE 1/Heuristics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OFFLINE 1/Heuristics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OFFLINE 1/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OFFLINE 1/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AStarSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AStarSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Heuristics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heuristics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -47,17 +40,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+            <state relative-caret-position="282">
+              <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1470">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="130">
+              <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
               <folding>
                 <element signature="e#926#1085#0" />
               </folding>
@@ -96,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Heuristics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-752">
+            <state relative-caret-position="-47">
               <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
               <folding>
                 <element signature="docComment;method#manHattan#0;class#Heuristics#0" />
@@ -107,14 +100,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AStarSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-150">
-              <caret line="98" column="22" lean-forward="true" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+            <state relative-caret-position="59">
+              <caret line="219" column="61" selection-start-line="219" selection-start-column="61" selection-end-line="219" selection-end-column="61" />
               <folding>
                 <element signature="method#printPath#0;class#AStarSearch#0" />
                 <element signature="e#3977#4378#1" />
+                <element signature="method#checkStateQ#0;class#AStarSearch#0" />
                 <element signature="e#4701#4780#0" />
                 <element signature="method#printPQStateInfo#0;class#AStarSearch#0" />
                 <element signature="e#5361#5758#1" />
@@ -165,8 +159,8 @@
         <option value="$PROJECT_DIR$/src/Heuristics.java" />
         <option value="$PROJECT_DIR$/src/result.txt" />
         <option value="$PROJECT_DIR$/src/Client.java" />
-        <option value="$PROJECT_DIR$/src/AStarSearch.java" />
         <option value="$PROJECT_DIR$/src/test.txt" />
+        <option value="$PROJECT_DIR$/src/AStarSearch.java" />
       </list>
     </option>
   </component>
@@ -257,7 +251,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4960981" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4960981" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.6897059" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -349,7 +343,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Heuristics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-752">
+        <state relative-caret-position="-47">
           <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
           <folding>
             <element signature="docComment;method#manHattan#0;class#Heuristics#0" />
@@ -359,13 +353,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+          <folding>
+            <element signature="e#926#1085#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AStarSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="98" column="22" lean-forward="true" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+        <state relative-caret-position="59">
+          <caret line="219" column="61" selection-start-line="219" selection-start-column="61" selection-end-line="219" selection-end-column="61" />
           <folding>
             <element signature="method#printPath#0;class#AStarSearch#0" />
             <element signature="e#3977#4378#1" />
+            <element signature="method#checkStateQ#0;class#AStarSearch#0" />
             <element signature="e#4701#4780#0" />
             <element signature="method#printPQStateInfo#0;class#AStarSearch#0" />
             <element signature="e#5361#5758#1" />
@@ -375,23 +387,6 @@
             <element signature="e#6270#6408#1" />
             <element signature="e#6329#6390#1" />
             <element signature="method#printPath#1;class#AStarSearch#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="e#926#1085#0" />
           </folding>
         </state>
       </provider>

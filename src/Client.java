@@ -52,7 +52,8 @@ public class Client {
         //initialState.childStates();
 
         AStarSearch astar = new AStarSearch();
-        astar.AstarSearch(initialState, "displacement");
+        //astar.AstarSearch(initialState, "displacement");
+        System.out.println(astar.checkIsSolvable(inputConfig2D,inputConfig));
 
 
 

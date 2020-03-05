@@ -12,3 +12,8 @@ Ashraful ones
 
 
 2 6 5 4 1 0 3 8 9 10 7 11 13 14 15 12
+
+INVERSION count check and solvability
+6 13 7 10 8 9 11 0 15 2 12 5 14 3 1 4   n=4 x= 3 IC = 62 YES
+3 9 1 15 14 11 4 6 13 0 10 12 2 7 8 5   n = 4 x = 2 IC = 56 NO
+13 2 10 3 1 12 8 4 5 0 9 6 15 14 11 7   n = 4 x = 2 IC  41 YES
