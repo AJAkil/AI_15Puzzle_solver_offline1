@@ -26,14 +26,20 @@ public class AStarSearch {
 
          //the body of the main loop runs till the queue is empty
          while (!pq.isEmpty()){
+             //if((pq.size()+visited.size())%1000==0)
+             //System.out.println("Size: "+(pq.size()+visited.size()));
+
              //retrieves and returns the head of the queue
              /*System.out.println("Printing the states of PQ-------------------------------------------------");
              printPQStateInfo(pq);
              System.out.println("----------------------------------------------------------------------------------");*/
              currentState = pq.poll();
+
+            // System.out.println(currentState.getF_cost());
+             //System.out.println(currentState.getH_cost());
              //System.out.println(visited.size());
              //System.out.println("The current popped state ");
-             ///currentState.printBoard();
+            // currentState.printBoard();
              //System.out.println(currentState.getF_cost());
             //adding to the visited Q after popping from the PQ
              visited.add(currentState);
@@ -43,6 +49,8 @@ public class AStarSearch {
                     result = true;
                     //printPath(visited);
                  printPath(currentState);
+                 System.out.println("Size: "+(pq.size()+visited.size()));
+                 System.out.println("total moves: "+currentState.getG_cost());
                     break;
              }else{
                  //Generate all the possible child state from the current state of the board
@@ -71,7 +79,7 @@ public class AStarSearch {
                      if(!isVisited){
                          //if PQ contains the child State or not
                          //System.out.println(isInPQ);
-                         if(!isInPQ){
+                        // if(!isInPQ){
                              //calculating the costs here
                              childState.setG_cost(currentState.getG_cost()+1);
                              childState.setH_cost(h.callHeursitic(heauristic,childState));
@@ -83,7 +91,7 @@ public class AStarSearch {
                              //childState.printBoard();
                              //System.out.println("----------");
                              pq.add(childState);
-                         }
+                      //   }
                      }
                  }
              }
@@ -174,6 +182,9 @@ public class AStarSearch {
         System.out.println();
         System.out.println();
     }
+
+
+    
 
 
 }

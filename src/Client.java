@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Client {
 
     public static int[][]  convertTo2D(int[] array){
@@ -42,7 +43,7 @@ public class Client {
 
         State initialState = new State(inputConfig2D, goalConfig2D);
 
-        initialState.printBoard();
+        //initialState.printBoard();
         Heuristics H = new Heuristics();
 
         //System.out.println(H.manHattan(initialState));
@@ -51,7 +52,7 @@ public class Client {
         //initialState.childStates();
 
         AStarSearch astar = new AStarSearch();
-        astar.AstarSearch(initialState, "manhattan");
+        astar.AstarSearch(initialState, "displacement");
 
 
 

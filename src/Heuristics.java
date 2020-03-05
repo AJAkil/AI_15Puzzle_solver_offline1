@@ -45,11 +45,14 @@ public class Heuristics {
         for (int i = 0; i < state.getBoardRows() ; i++) {
             for (int j = 0; j < state.getBoardColumns(); j++) {
                 if(currentState[i][j]!=goalState[i][j]){
-                   displacement++;
+                   if(currentState[i][j]!=0){
+                       displacement++;
+                   }
+
                 }
             }
         }
-        return displacement-1;
+        return Math.abs(displacement);
     }
 
     public int callHeursitic(String name, State state){
