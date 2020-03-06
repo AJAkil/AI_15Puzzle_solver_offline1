@@ -104,6 +104,7 @@ public class AStarSearch {
 
     public boolean AstarSearchEff(State startState, String heuristic){
          boolean result = false;
+         int pqCounter = 0;
          //a PQ to handle the expanded fringes
          PriorityQueue<State>pq = new PriorityQueue<>(new diplacementComparator());
 
@@ -124,9 +125,12 @@ public class AStarSearch {
 
             if(currentState.checkEquality()){
                 result = true;
+                System.out.println("Steps: ");
                 printPath(currentState);
-                System.out.println("Size: "+(pq.size()+visited.size()));
+                //System.out.println("Size: "+(pq.size()+visited.size()));
+                System.out.println("Heuristic: "+heuristic);
                 System.out.println("total moves: "+currentState.getG_cost());
+                System.out.println("Nodes pushed to PQ: "+pqCounter);
                 break;
             }else{
 
@@ -145,7 +149,7 @@ public class AStarSearch {
                         childState.setF_cost(childState.getG_cost()+childState.getH_cost());
                         childState.setParentState(currentState);
                         //after cost calculations, we add it to the PQ
-
+                        pqCounter++;
                         pq.add(childState);
 
                     }
@@ -242,8 +246,7 @@ public class AStarSearch {
 
          state.printBoard();
         System.out.println();
-        System.out.println();
-        System.out.println();
+
     }
 
 
@@ -252,7 +255,7 @@ public class AStarSearch {
         int n = board.length;
         int blankPos = -1;
         int inversionCount = 0;
-        System.out.println("row-col = " + n);
+        //System.out.println("row-col = " + n);
         //find blank tile position from the bottom of the game board
         for (int i = n - 1; i >=0 ; i--) {
             for (int j = n - 1; j >=0 ; j--) {
@@ -262,7 +265,7 @@ public class AStarSearch {
             }
         }
 
-        System.out.println("position of blank = "+blankPos);
+        //System.out.println("position of blank = "+blankPos);
 
         //counting inversion of the given board state wrt an ideal state
         for (int i = 0; i < n*n-1 ; i++) {
@@ -273,7 +276,7 @@ public class AStarSearch {
             }
         }
 
-        System.out.println("The number of inversion is = "+inversionCount);
+        //System.out.println("The number of inversion is = "+inversionCount);
 
 
         //checking the inversion count
