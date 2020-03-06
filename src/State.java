@@ -184,10 +184,29 @@ public class State {
     }
 
 
+    @Override
+    public boolean equals(Object obj) {
+
+        if(obj instanceof State){
+            State state = (State) obj;
 
 
+            for (int i = 0; i < this.getCurrentBoardState().length ; i++) {
+                for (int j = 0; j < this.getCurrentBoardState().length; j++) {
+                    if(this.getCurrentBoardState()[i][j] != state.getCurrentBoardState()[i][j]){
+                        return false;
+                    }
+                }
+            }
+        }
 
 
+        return true;
+    }
 
+    @Override
+    public int hashCode() {
 
+        return java.util.Arrays.deepHashCode( this.currentBoardState);
+    }
 }

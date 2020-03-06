@@ -99,6 +99,69 @@ public class AStarSearch {
         return result;
      }
 
+
+
+
+    public boolean AstarSearchEff(State startState, String heuristic){
+         boolean result = false;
+         //a PQ to handle the expanded fringes
+         PriorityQueue<State>pq = new PriorityQueue<>(new diplacementComparator());
+
+         //a hash set to keep track of the visited nodes
+         HashSet<State>visited = new HashSet<>();
+
+
+        Heuristics h = new Heuristics();
+
+        pq.add(startState);
+        State currentState;
+
+        while (!pq.isEmpty()){
+            currentState = pq.poll();
+
+            visited.add(currentState);
+
+
+            if(currentState.checkEquality()){
+                result = true;
+                printPath(currentState);
+                System.out.println("Size: "+(pq.size()+visited.size()));
+                System.out.println("total moves: "+currentState.getG_cost());
+                break;
+            }else{
+
+                ArrayList<State>expandedStates = currentState.childStates();
+
+                for (State childState : expandedStates){
+
+                    boolean isVisited = visited.contains(childState);
+                    //System.out.println(isVisited);
+
+                    if(!isVisited){
+
+                        //calculating the costs here
+                        childState.setG_cost(currentState.getG_cost()+1);
+                        childState.setH_cost(h.callHeursitic(heuristic,childState));
+                        childState.setF_cost(childState.getG_cost()+childState.getH_cost());
+                        childState.setParentState(currentState);
+                        //after cost calculations, we add it to the PQ
+
+                        pq.add(childState);
+
+                    }
+                }
+
+            }
+
+        }
+
+
+
+
+         return result;
+
+     }
+
     public void printPath(Queue<State> visited) {
          State state;
          System.out.println("The total number of steps = "+visited.size());

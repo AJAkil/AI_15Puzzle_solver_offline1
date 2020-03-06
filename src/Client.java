@@ -52,7 +52,7 @@ public class Client {
             //initialState.childStates();
 
 
-            astar.AstarSearch(initialState, "manhattan");
+            astar.AstarSearchEff(initialState, "displacement");
             //System.out.println(astar.checkIsSolvable(inputConfig2D,inputConfig));
 
         }else{
