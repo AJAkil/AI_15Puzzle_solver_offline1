@@ -104,7 +104,6 @@ public class AStarSearch {
 
     public boolean AstarSearchEff(State startState, String heuristic){
          boolean result = false;
-         int pqCounter = 0;
          //a PQ to handle the expanded fringes
          PriorityQueue<State>pq = new PriorityQueue<>(new diplacementComparator());
 
@@ -129,8 +128,8 @@ public class AStarSearch {
                 printPath(currentState);
                 //System.out.println("Size: "+(pq.size()+visited.size()));
                 System.out.println("Heuristic: "+heuristic);
-                System.out.println("total moves: "+currentState.getG_cost());
-                System.out.println("Nodes pushed to PQ: "+pqCounter);
+                System.out.println("Path Cost/Total moves: "+currentState.getG_cost());
+                System.out.println("Size of the Closed List: "+visited.size());
                 break;
             }else{
 
@@ -149,7 +148,6 @@ public class AStarSearch {
                         childState.setF_cost(childState.getG_cost()+childState.getH_cost());
                         childState.setParentState(currentState);
                         //after cost calculations, we add it to the PQ
-                        pqCounter++;
                         pq.add(childState);
 
                     }

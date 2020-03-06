@@ -31,11 +31,11 @@ public class Main {
         int counter = 0;
         while (scan.hasNextLine()){
             counter++;
-            
-            if(counter == 1) scan.nextLine();
+
+            if(counter == 1) scan.nextLine(); //reading the first input value
 
             if(counter!=1){
-                String[]tileValues = scan.nextLine().split(" ");
+                String[]tileValues = scan.nextLine().split(" "); //reading the second lines and spitting them to an array of strings
 
                 if(counter == 2){
 
